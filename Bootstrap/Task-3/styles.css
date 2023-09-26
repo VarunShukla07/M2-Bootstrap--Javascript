@@ -1,0 +1,26 @@
+.custom-grey{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #FAF1E4;
+}
+.svg-icon {
+    vertical-align: middle;
+}
+.Horizontal{
+    list-style-type: none;
+}
+.top-container{
+    margin-top: 30px;
+    padding-top: 20px;
+}
+.centered-container {
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+}
+h4{
+    font-family: 'Montserrat', sans-serif;
+}

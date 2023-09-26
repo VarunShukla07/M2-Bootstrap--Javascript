@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-Task-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Company Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pricing</a>
+                    </li>
+                    <button type="button" class="btn btn-outline-primary">Sign Up</button>
+                </ul>
+            </div>
+        </div>
+    </nav><br><br>
+    <div class="container centered-container">
+        <h2 class="text-center"><strong>Pricing</strong></h2><br>
+        <p class="text-center">Quickly build an effective pricing table for your potential customer with this Bootstrap
+            example. It's built with default Bootstrap components and utilities
+            with little customization</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card text-center">
+                    <h5 class="card-top custom-grey">Free</h5>
+                    <div class="card-body">
+                        <h4> <strong>$0</strong> /mo</h4>
+                        <p class="card-text">
+                            10 user included <br>
+                            2GB of storage <br>
+                            Email Support <br>
+                            Help Center Access <br>
+                        </p>
+                        <button type="button" class="btn btn-outline-primary">Sign Up for Free</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <h5 class="card-top custom-grey">Pro</h5>
+                    <div class="card-body">
+                        <h4> <strong>$15</strong> /mo</h4>
+                        <p class="card-text">
+                            20 user included <br>
+                            10GB of storage <br>
+                            Priority Email Support <br>
+                            Help Center Access <br>
+                        </p>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card text-center">
+                    <h5 class="card-top custom-grey">Enterprise</h5>
+                    <div class="card-body">
+                        <h4> <strong>$29</strong> /mo</h4>
+                        <p class="card-text">
+                            30 user included <br>
+                            15GB of storage <br>
+                            Phone and Email Support <br>
+                            Help Center Access <br>
+                        </p>
+                        <a href="#" class="btn btn-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container top-container">
+        <div class="row">
+            <div class="col-md-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#5B0888" class="bi bi-bootstrap-fill svg-icon" viewBox="0 0 16 16">
+                    <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+                    <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+                </svg><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle svg-icon" viewBox="0 0 16 16">
+                    <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.88.088-1.512.768-1.512 1.729Z"/>
+                </svg>
+            </div>
+            <div class="col-sm-3">
+                <ul class="Horizontal">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#"><strong>Features</strong>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Cool Stuff</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Random Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team Features</a>
+                      </li>
+                  </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul class="Horizontal">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#"><strong>Resources</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Resources Name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Another Resources</a>
+                      </li>
+                  </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul class="Horizontal">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#"><strong>About</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy</a>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
