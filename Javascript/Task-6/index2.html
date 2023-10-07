@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Form</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("loginForm");
+            const result = document.getElementById("result");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                if (username.trim() === ""){
+                    result.innerHTML = "Username is required";
+                    return;
+                }
+                if(password.trim() === ""){
+                    result.innerHTML = "Password is required";
+                    return;
+                }
+
+                // Here, you can perform further actions like submitting the form or logging in the user.
+                // For now, let's just display a success message.
+                result.innerHTML = "Login successful!";
+            });
+        });
+    </script>
+</body>
+</html>

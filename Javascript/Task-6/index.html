@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript-Task-5</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chivo:ital@1&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<style>
+		.input-container {
+			position: relative;
+			display: inline-block;
+		}
+
+		.custom-input {
+			padding-left: 30px;
+			/* Adjust the padding as needed to make room for the icon */
+			background-image: url("path/to/your-image.png");
+			/* Replace with the path to your image */
+			background-repeat: no-repeat;
+			background-size: 40px;
+			/* Adjust the size of the image */
+			background-position: 5px center;
+			/* Adjust the position of the image */
+			border: 1px solid #ccc;
+			/* Add any additional styling you want for the input box */
+			border-radius: 4px;
+			height: 30px;
+			/* Adjust the height as needed */
+		}
+
+		.input-icon {
+			position: absolute;
+			left: 5px;
+			/* Adjust the position of the icon */
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.button:hover {
+			background-color: #662549;
+			transform: scale(1.1);
+			/* Zoom in by 10% */
+		}
+
+		.button {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: transform 0.3s ease, background-color 0.3s ease;
+			font-family: 'Poppins', sans-serif;
+			border-style: none;
+			color: white;
+			background-color: blue;
+			height: 3.3vw;
+			width: 65%;
+		}
+
+		.ending {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.remb {
+			display: flex;
+			align-items: center;
+		}
+
+		.forgot {
+			padding-right: 20px;
+			/* Add padding to the right side */
+		}
+
+
+		.cort {
+			background-color: #F1EFEF;
+			height: 500px;
+			width: 400px;
+			border: 2px black solid;
+			align-items: center;
+			margin-top: 100px;
+			margin-left: 440px;
+		}
+
+		h2 {
+			text-align: center;
+			padding-top: 60px;
+			font-family: 'Chivo', sans-serif;
+		}
+		p{
+			text-align: center;
+		}
+		form {
+			align-items: center;
+			padding-top: 20px;
+			padding-left: 80px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cort">
+		<h2 class="justify-content-center">Instagram</h2>
+		<form id="contactForm">
+			<div class="input-container">
+				<input type="text" class="custom-input" placeholder="Username" id="name" name="name" required>
+				<span class="input-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-person-fill" viewBox="0 0 16 16">
+						<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+					</svg>
+				</span>
+			</div><br><br>
+			<div class="input-container">
+				<input type="password" placeholder="Password" class="custom-input" id="Passwd" name="password" required>
+				<span class="input-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-lock-fill" viewBox="0 0 16 16">
+						<path
+							d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+					</svg>
+				</span>
+			</div><br><br><br>
+			<input class="button" type="submit" value="Login"><br><br>
+			<div class="ending">
+				<div class="remb">
+					<input type="checkbox" class="checkbox" name="checkbox" id="">
+					<label for="">Remember me</label>
+				</div>
+				<div class="forgot">
+					<a href="#">Forgot Password?</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<p>Dont have an account! <a href="./index2.html">Sign up Here</a> </p>
+
+	<div id="result"></div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

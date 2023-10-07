@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript-Task-7</title>
+</head>
+<style>
+    body{
+        background-color: #FFF2D8;
+    }
+    #title {
+        color: blue;
+    }
+
+    #image {
+        height: 250px;
+        width: 250px;
+        transition: transform 1s ease;
+    }
+
+    #start {
+        margin-left: 100px;
+    }
+
+    #stop {
+        margin-left: 20px;
+    }
+
+    .move {
+        animation: move 2s linear;
+        animation-play-state: running;
+    }
+
+    @keyframes move {
+        0% {
+            margin-left: 0;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    #bton {
+        text-align: center;
+        /* Center-align the buttons */
+    }
+
+    button#start,
+    button#stop {
+        font-size: 1.2em;
+        /* Increase the font size for bigger buttons */
+        padding: 10px 20px;
+        /* Add padding to make the buttons bigger */
+        margin: 10px;
+        /* Add margin for spacing */
+        cursor: pointer;
+        background-color: #3498db;
+        /* Button background color */
+        color: #fff;
+        /* Button text color */
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+        /* Add a smooth hover effect */
+    }
+
+    button#start:hover,
+    button#stop:hover {
+        background-color: #2980b9;
+        /* Change the background color on hover */
+        transform: scale(1.05);
+        /* Slightly increase size on hover */
+    }
+
+    h3 {
+        font-size: 2vw;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <img src="https://i.pinimg.com/originals/65/5d/2d/655d2da400a648abca600766a89deead.gif" id="image" alt="">
+    <h3 id="title">Click the following buttons to handle animation</h3>
+    <div id="bton">
+        <button onclick="startanimation()" id="start">Start</button>
+        <button onclick="stopanimation()" id="stop">Stop</button>
+    </div>
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

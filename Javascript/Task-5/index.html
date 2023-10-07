@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript-Task-5</title>
+	<style>
+		form{
+			margin-top: 40px;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<form id="contactForm">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="website">Website:</label>
+		<input type="url" id="website" name="website" required><br><br>
+
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<div id="result"></div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

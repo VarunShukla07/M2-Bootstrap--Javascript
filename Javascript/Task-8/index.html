@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript-Task-8</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    span{
+      color: red;
+      padding-left: 10px;
+    }
+    body {
+      background-image: linear-gradient(to bottom, #ffcccc, #ff6699);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .genin{
+      padding-left: 40px;
+    }
+    .geninp{
+      padding-left: 100px;
+    }
+    .tot-cont {
+      padding-left: 10px;
+    }
+
+    .cont-left {
+      margin-left: 200px;
+    }
+    .cort{
+      padding-top: 20px;
+      color: blue;
+      text-align: center;
+    }
+    .custom-orag {
+      color: white;
+      background-color: red;
+    }
+    .custom-orag:hover{
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bd-example m-0 border-0">
+    <div class="container-md cort">
+      <h2>Registration Form</h2>
+    </div>
+    <form class="container-xxl cont-left g-3" onsubmit="return verify()" novalidate="">
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">First Name</label>
+          <span class="input-group-text tot-cont" style="margin-left: 30px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            </svg>
+          </span>
+          <input type="text" class="form-control" id="fn" onkeydown="checkfn()" aria-describedby="inputGroupPrepend"
+            required="">
+          <span id="fnpop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">Last Name</label>
+          <span class="input-group-text tot-cont" style="margin-left: 30px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            </svg>
+          </span>
+          <input type="text" class="form-control" id="ln" onkeydown="checkln()" aria-describedby="inputGroupPrepend"
+            required="">
+          <span id="lnpop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">E-Mail</label>
+          <span class="input-group-text tot-cont" style="margin-left: 60px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+            </svg>
+          </span>
+          <input type="text" class="form-control" id="mail" onkeydown="checkmail()" aria-describedby="inputGroupPrepend"
+            required="">
+          <span id="mailpop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">Password</label>
+          <span class="input-group-text tot-cont" style="margin-left: 40px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+            </svg>
+          </span>
+          <input type="password" class="form-control" id="pass" onkeydown="checkpass()" aria-describedby="inputGroupPrepend"
+            required="">
+            <span id="passpop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" style="text-align: left;" class="form-label">Re-enter Password</label>
+          <span class="input-group-text tot-cont" style="margin-left: 40px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+            </svg>
+          </span>
+          <input type="password" class="form-control" id="repass" onkeydown="checkrepass()" aria-describedby="inputGroupPrepend"
+            required="">
+            <span id="repasspop">Poor or Mismatch</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group" style="margin-top: 30px;">
+          <label for="">Gender:
+
+            <label  class="genin" for="">Male <input type="radio" name="Gender" checked value="Male"></label><br>
+            <label class="geninp" for="">Female <input type="radio" name="Gender" value="Female"></label>
+            <br>
+          </label>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" style="text-align: left;" class="form-label">Age</label>
+          <span class="input-group-text tot-cont" style="margin-left: 77px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backpack4-fill" viewBox="0 0 16 16">
+              <path d="M8 0a2 2 0 0 0-2 2H3.5a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h4v.5a.5.5 0 0 0 1 0V7h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H10a2 2 0 0 0-2-2Zm1 2a1 1 0 0 0-2 0h2Zm-4 9v2h6v-2h-1v.5a.5.5 0 0 1-1 0V11H5Z"/>
+              <path d="M14 7.599A2.986 2.986 0 0 1 12.5 8H9.415a1.5 1.5 0 0 1-2.83 0H3.5A2.986 2.986 0 0 1 2 7.599V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.599ZM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-3Z"/>
+            </svg>
+          </span>
+          <input type="password" class="form-control" id="age" onkeydown="checkage()" aria-describedby="inputGroupPrepend"
+            required="">
+            <span id="agepop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">Phone #</label>
+          <span class="input-group-text tot-cont" style="margin-left: 45px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-telephone-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            </svg>
+          </span>
+          <input type="text" class="form-control" id="phno" onkeydown="checkphno()" aria-describedby="inputGroupPrepend"
+            required="">
+            <span id="phnopop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label for="" class="form-label">Address</label>
+          <span class="input-group-text tot-cont" style="margin-left: 45px;" id="inputGroupPrepend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-house-door-fill" viewBox="0 0 16 16">
+              <path
+                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+            </svg>
+          </span>
+          <textarea id="add" onkeydown="checkadd()" class="form-control" aria-label="With textarea" required></textarea>
+          <span id="addpop">Poor</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label class="form-label">State</label>
+          <span class="input-group-text tot-cont" style="margin-left: 65px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-list-ul"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+          </span>
+          <select class="form-select" required="" style="width: 150px;">
+            <option style="width: 100px;" selected="" disabled="" value="">Please Select your State</option>
+            <option>Chennai</option>
+            <option>Gujarat</option>
+            <option>Uttar Pradesh</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-5 col-md-8">
+        <div class="input-group " style="margin-top: 30px;">
+          <label class="form-label">State</label>
+          <span class="input-group-text tot-cont" style="margin-left: 65px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-list-ul"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+          </span>
+          <select class="form-select" required="" style="width: 150px;">
+            <option style="width: 100px;" selected="" disabled="" value="">Choose your country</option>
+            <option>India</option>
+            <option>US</option>
+            <option>Canada</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group" style="margin-top: 30px;">
+          <label for="">Languages Know:
+            <input type="checkbox">Hindi</input>
+            <input type="checkbox" checked>English</input><input type="checkbox">Kannada</input><input
+              type="checkbox">Telugu</input></label><br>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group" style="margin-top: 30px;">
+          <label for=""><input type="checkbox" name="" id="" checked
+            >Hereby I declare all the given details are true</label>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-5 col-md-8">
+        <div class="input-group justify-content-end" style="margin-top: 30px;">
+          <label for="">Log into <a href="https://ethnus.com/">Ethnus</a> Website</label>
+        </div>
+      </div>
+      <div class="col-md-4" style="margin-top: 30px;">
+        <button class="btn custom-orag d-block mx-auto" type="submit">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
